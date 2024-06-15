@@ -1,0 +1,103 @@
+.co{
+    width: min(calc(80vw - 6px), 600px); /* border の幅が6pxと仮定して計算 */
+    min-width: 280px;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 25px;
+}
+.buttom{
+    width:fit-content;
+    height: fit-content;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.555);
+    padding: 8px 20px;
+    text-align: center;    
+    font-size:20px;
+    cursor: pointer;
+    transition:all 0.2s ease-in-out;
+    margin: 1px 0;
+}
+#inputjs{
+    width: min(calc(80vw -  12.5px),587.5px);
+    min-width: 267.5px;
+    height: 20em;
+    font-size: 16px;
+    margin-top: 20px;
+}
+body{
+    font-family: Verdana, Geneva, sans-serif;
+    min-height: 100vh;
+}
+.buttom:hover{
+    background-color: black;
+    color: white;
+}
+#creater{
+    display: none;
+}
+body{
+    cursor:default;
+    margin: 0;
+    padding: 0;
+    user-select:none;
+}
+#run{
+    display: none;
+}
+.head{
+    margin: 0 0 50px;
+    width: 100vw;
+    min-width: 335px;
+    height: 70px;
+    cursor: pointer;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.508);
+    text-align:left;
+    font-size: 60px;
+    overflow: hidden;
+    font-family: Impact, fantasy;
+}
+#output{
+    color: #1a0dab;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select:text;
+}
+#error{
+    background-color:rgb(255, 255, 255);
+    color: red;
+}
+#error:hover{
+    background-color: red;
+    color: white;
+}
+textarea{
+    white-space: nowrap;
+    overflow: auto;
+}
+#error{
+    margin-top: 20px;
+    user-select: all;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#program{
+    display: none;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    user-select: all;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-wrap: nowrap;
+    overflow: scroll;
+    padding: 20px;
+}
+#program:hover{
+    background-color: black;
+    color: white;
+    text-wrap: nowrap;
+    overflow: scroll;
+}

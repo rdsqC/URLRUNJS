@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URLRUNJS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 onclick="home()" class="head">URLRUNJS</h1>
+    <div class="co" id="creater">
+        <h1 style="font-size: 2.5em;">Enter JS</h1>
+        <div style="display: flex;gap: 4px;flex-wrap: wrap;">
+            <div class="buttom" id="evaluate">Evaluate</div>
+            <div class="buttom" id="Generate">Generate URL</div>
+        </div>
+        <div id="error"  style="display: none;">Error:
+            <div id="errorcontent">OH!! Why Can you look this?</div>
+        </div>
+        <textarea name="imputjs" id="inputjs" spellcheck="false"></textarea>
+        <h1>Created URL</h1>
+        <p id="output"></p>
+    </div>
+    <div class="co" id="run">
+        <h1>JS executed</h1>
+        <div class="buttom" id="showprogram">Show program</div>
+        <div id="program"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
