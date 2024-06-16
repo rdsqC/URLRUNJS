@@ -33,6 +33,7 @@ generate.addEventListener('click',function(){ //URLとして生成
     //プログラムをパラメータに入れられるようにエンコード
     outputText = encodeURIComponent(outputText); 
     outputText = outputText.replace(/\(/g, '%28').replace(/\)/g, '%29');
+    outputText = outputText.replace(/'/g, '%27').replace(/"/g, '%22');
     
     output.textContent = location.origin + location.pathname + '?js=' + outputText;
 });
