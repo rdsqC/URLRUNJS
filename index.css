@@ -51,11 +51,11 @@ body{
     margin: 0 0 50px;
     width: 100vw;
     min-width: 335px;
-    height: 70px;
+    height: 10vh;
     cursor: pointer;
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.508);
     text-align:left;
-    font-size: 60px;
+    font-size: 8vh;
     overflow: hidden;
     font-family: Impact, fantasy;
 }
