@@ -28,10 +28,12 @@ const program = document.getElementById("program");
 
 let problem = null;
 
-generate.addEventListener('click',function(){
-    output.textContent = location.origin + location.pathname + '?js=' + document.getElementById('inputjs').value;
+generate.addEventListener('click',function(){ //URLとして生成
+    let outputText = document.getElementById('inputjs').value;
+    outputText = encodeURIComponent(outputText); //プログラムをパラメータに入れられるようにエンコード
+    output.textContent = location.origin + location.pathname + '?js=' + outputText;
 });
-evaluate.addEventListener('click',function(){
+evaluate.addEventListener('click',function(){ //プログラムを実行。
     try{
         new Function(document.getElementById('inputjs').value)();
         problem = null;
@@ -47,17 +49,18 @@ evaluate.addEventListener('click',function(){
     // script.innerHTML = `${document.getElementById('inputjs').value}`;
     // document.body.appendChild(script);
 });
-output.addEventListener('click',() => {
+output.addEventListener('click',() => { //リンクを押されたときにそのリンクをコピーする。
     copy(output.textContent);
 });
-showprogram.addEventListener('click',() => {
+showprogram.addEventListener('click',() => { //ボタンが押されたときにプログラムを表示する。
     program.textContent = params.get('js');
     program.style.display = 'block';
 });
 
 if(params.get('js')){
     document.getElementById('run').style.display = "block";
-    const codeString = params.get('js') + '';
+    let codeString = params.get('js') + '';
+    codeString = decodeURIComponent(codeString);
 
     // Functionコンストラクタを使って文字列を実行
     try{

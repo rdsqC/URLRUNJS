@@ -85,18 +85,19 @@ textarea{
 }
 #program{
     display: none;
-    background-color: white;
-    color: black;
+    background-color:black;
+    color: white;
     margin-top: 20px;
     user-select: all;
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
     text-wrap: nowrap;
     overflow: scroll;
-    padding: 20px;
+    padding: 10px;    
+    min-height: 200px;
 }
 #program:hover{
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     color: white;
     text-wrap: nowrap;
     overflow: scroll;
