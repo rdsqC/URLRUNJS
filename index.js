@@ -30,7 +30,10 @@ let problem = null;
 
 generate.addEventListener('click',function(){ //URLとして生成
     let outputText = document.getElementById('inputjs').value;
-    outputText = encodeURIComponent(outputText); //プログラムをパラメータに入れられるようにエンコード
+    //プログラムをパラメータに入れられるようにエンコード
+    outputText = encodeURIComponent(outputText); 
+    outputText = outputText.replace(/\(/g, '%28').replace(/\)/g, '%29');
+    
     output.textContent = location.origin + location.pathname + '?js=' + outputText;
 });
 evaluate.addEventListener('click',function(){ //プログラムを実行。
